@@ -10,6 +10,7 @@ const Container = styled.div`
 const Wrapper = styled.div`
   width: 100%;
   padding: 10px 20px;
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,13 +49,16 @@ const Logo = styled.h1`
 `;
 const Right = styled.div`
   flex: 1;
+
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 `;
 
 const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
+  margin-left: 20px;
 `;
 
 const Navbar = () => {
@@ -65,7 +69,7 @@ const Navbar = () => {
           <Language>EN</Language>
           <SearchContainer>
             <Input />
-            <Search></Search>
+            <Search style={{ color: "gray", fontSize: 16 }}></Search>
           </SearchContainer>
         </Left>
         <Center>
